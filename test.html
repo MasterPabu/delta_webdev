@@ -1,0 +1,47 @@
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="styles.css">
+		<title>
+			Falcon 9 Countdown
+		</title>
+		<h1> <br>Time to next Falcon 9 Launch </h1>
+		<h2> EUTELSAT-2 </h2>
+	</head>
+	<body style="text-align:center;">
+		<div id="mainblock">
+			<div> 
+				<span id=days_number></span>
+				<div class="label">DAYS</div>
+			</div>
+			<div>
+				<span id=hours_number></span>
+				<div class="label">HOURS</div>	
+			</div>
+			<div> 
+				<span id=minutes_number></span>
+				<div class="label">MINS</div>
+			</div>
+			<div> 
+				<span id=seconds_number></span>
+				<div class="label">SECS</div>
+			</div>
+		</div>
+		<script>
+			var v = countDownTimer();
+			function countDownTimer () {
+				var currDate = new Date();
+				var eventDate = new Date("June 16 2016 20:00:00");
+				var timeDiff = eventDate - currDate;
+				var seconds = Math.floor((timeDiff / 1000) % 60);
+				var mins = Math.floor((timeDiff / (1000 * 60)) % 60);
+				var hours = Math.floor((timeDiff / (1000 * 60 * 60)) % 24);
+				var days = Math.floor(timeDiff / (1000 * 60 * 60 * 24));
+				document.getElementById("days_number").innerHTML= days;
+				document.getElementById("hours_number").innerHTML= hours;
+				document.getElementById("minutes_number").innerHTML= mins;
+				document.getElementById("seconds_number").innerHTML= seconds;
+			}
+			var interval = setInterval(countDownTimer,1000);
+		</script>
+	</body>
+</html>	

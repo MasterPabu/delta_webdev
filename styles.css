@@ -1,0 +1,43 @@
+@font-face {
+	font-family:"Ostrich Sans Medium";
+	src:url("ostrich-regular.eot?") format("eot"),
+		url("ostrich-regular.woff") format("woff"),
+		url("ostrich-regular.ttf") format("truetype"),
+		url("ostrich-regular.svg#OstrichSans-Medium") format("svg");
+		font-weight:normal;
+		font-style:normal;
+}
+
+h1 {
+	color:white;
+}
+h2 {
+	color:white;
+	font-size:50px;
+}
+body{
+	font-family: "Ostrich Sans Medium";
+	text-align:center;
+	background: black;
+	background-image: url("http://i.imgur.com/onRD0je.jpg");
+	background-size:contain;
+}
+#mainblock>div{
+	display:inline-block;
+	border-radius:10px;
+	padding:20px;
+	margin:2px;
+}
+#mainblock>div>div{
+	font-size:64px;
+	padding:5px;
+	padding-top:15px;
+	padding-bottom:0px;
+	color:white;
+	border-radius:10px;
+}
+#mainblock>div>span{
+	font-size:420;
+	padding:30px;
+	color:white;
+}
