@@ -7,13 +7,17 @@
 		font-weight:normal;
 		font-style:normal;
 }
-
 h1 {
 	color:white;
 }
 h2 {
 	color:white;
 	font-size:50px;
+}
+form {
+	color:white;
+	font-size:25px;
+	font-family:"Ostrich Sans Medium";
 }
 body{
 	font-family: "Ostrich Sans Medium";
@@ -25,6 +29,7 @@ body{
 #mainblock>div{
 	display:inline-block;
 	border-radius:10px;
+	min-width:350px;
 	padding:20px;
 	margin:2px;
 }
@@ -39,5 +44,33 @@ body{
 #mainblock>div>span{
 	font-size:420;
 	padding:30px;
+	color:white;
+}
+input[type=text] {
+    padding:5px; 
+    border:2px solid #ccc; 
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+	font-size:20px;
+	background-color:rgba(0,0,0,0);
+	color:white;
+}
+input[type=datetime-local] {
+    padding:5px; 
+    border:2px solid #ccc; 
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+	font-size:16px;
+	background-color:rgba(0,0,0,0);
+	color:white;
+}
+
+input[type=button] {
+	font-size:20px;
+	padding:5px; 
+    border:2px solid #ccc; 
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+	background-color:rgba(0,0,0,0);
 	color:white;
 }

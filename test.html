@@ -1,11 +1,13 @@
 <html>
 	<head>
 		<link rel="stylesheet" type="text/css" href="styles.css">
+		<link rel="stylesheet" type="text/css"
+      href="https://fonts.googleapis.com/css?family=Font+Name">
 		<title>
-			Falcon 9 Countdown
+			Countdown!
 		</title>
-		<h1> <br>Time to next Falcon 9 Launch </h1>
-		<h2> EUTELSAT-2 </h2>
+		<h1> <br>Countdown Timer</h1>
+		<h2 id="eventName"> COUNTDOWN TO 2017! </h2>
 	</head>
 	<body style="text-align:center;">
 		<div id="mainblock">
@@ -26,22 +28,15 @@
 				<div class="label">SECS</div>
 			</div>
 		</div>
-		<script>
-			var v = countDownTimer();
-			function countDownTimer () {
-				var currDate = new Date();
-				var eventDate = new Date("June 16 2016 20:00:00");
-				var timeDiff = eventDate - currDate;
-				var seconds = Math.floor((timeDiff / 1000) % 60);
-				var mins = Math.floor((timeDiff / (1000 * 60)) % 60);
-				var hours = Math.floor((timeDiff / (1000 * 60 * 60)) % 24);
-				var days = Math.floor(timeDiff / (1000 * 60 * 60 * 24));
-				document.getElementById("days_number").innerHTML= days;
-				document.getElementById("hours_number").innerHTML= hours;
-				document.getElementById("minutes_number").innerHTML= mins;
-				document.getElementById("seconds_number").innerHTML= seconds;
-			}
-			var interval = setInterval(countDownTimer,1000);
-		</script>
+		<form action="demo_form.asp">
+			<br><br>
+			Event Name: <input type="text" name="name_field" id="event_name" value="New Event">
+						<input type="button" value="Set Title" id="submit" onclick="setEventTitle()"><br>
+			Event Time: <input type="datetime-local" name="time_field" id="event_time">
+						<input type="button" value="Set Time" id="submit" onclick="setEventTime();"><br>
+			<input type="button" value="Reset to Default" id="submit" onclick="doReset()">
+		</form>
+		<script src="program.js">
+					</script>
 	</body>
 </html>	
